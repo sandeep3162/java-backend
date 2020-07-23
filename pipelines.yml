@@ -1,5 +1,5 @@
 resources:
-  - name: mybranch
+  - name: test
     type: GitRepo
     configuration:
       path: dev/cms
@@ -26,9 +26,8 @@ pipelines:
           integrations:
             - name: jfrog211  # required
           inputResources:
-            - name: mybranch         # required
+            - name: test         # required
             
- 
         execution:
           onStart:
             - echo "Preparing for work..."
@@ -38,6 +37,3 @@ pipelines:
             - echo "uh oh, something went wrong"
           onComplete:                                  #always
             - echo "Cleaning up some stuff"
-
- 
-      
