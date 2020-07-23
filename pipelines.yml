@@ -24,7 +24,7 @@ pipelines:
           #autoPublishBuildInfo: <string>      # optional
  
           integrations:
-            - name: jfrog211  # required
+            - name: demoArt  # required
           inputResources:
             - name: test         # required
             
