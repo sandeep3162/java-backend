@@ -3,8 +3,8 @@ type: maven
 resolver:
   snapshotRepo: libs-snapshot-local
   releaseRepo: libs-release-local
-  serverID: jfrog211
+  serverID: demoArt
 deployer:
   snapshotRepo: libs-snapshot-local
   releaseRepo: libs-release-local
-  serverID: jfrog211
+  serverID: demoArt
