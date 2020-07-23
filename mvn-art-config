@@ -1,10 +1,10 @@
 version: 1
 type: maven
 resolver:
-  snapshotRepo: libs-snapshot
-  releaseRepo: libs-release
-  serverID: demoArt
+  snapshotRepo: libs-snapshot-local
+  releaseRepo: libs-release-local
+  serverID: jfrog211
 deployer:
   snapshotRepo: libs-snapshot-local
   releaseRepo: libs-release-local
-  serverID: demoArt
+  serverID: jfrog211
