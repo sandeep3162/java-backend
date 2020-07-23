@@ -9,7 +9,7 @@ resources:
       
       
 pipelines:
-  - name: demo_application
+  - name: demo_maven
     steps:
       - name: build
         type: MvnBuild
