@@ -2,10 +2,10 @@ resources:
   - name: test
     type: GitRepo
     configuration:
-      path: dev/cms
+      path: sandeep3162/java-backend
       gitProvider: mygithub
       branches:
-        include: jfrogSampleBuild
+        include: master
       
       
 pipelines:
