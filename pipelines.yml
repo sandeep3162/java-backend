@@ -1,0 +1,43 @@
+resources:
+  - name: mybranch
+    type: GitRepo
+    configuration:
+      path: dev/cms
+      gitProvider: mygithub
+      branches:
+        include: jfrogSampleBuild
+      
+      
+pipelines:
+  - name: demo_application
+    steps:
+      - name: build
+        type: MvnBuild
+        configuration:
+          #inherits from bash
+          mvnCommand: clean
+          sourceLocation: .
+          configFileLocation: .
+          configFileName: mvn-art-config     # required
+          #forceXrayScan:        <string>      # optional
+          #failOnScan:           <boolean>     # default true
+          #autoPublishBuildInfo: <string>      # optional
+ 
+          integrations:
+            - name: jfrog211  # required
+          inputResources:
+            - name: mybranch         # required
+            
+ 
+        execution:
+          onStart:
+            - echo "Preparing for work..."
+          onSuccess:
+            - echo "Job well done!"
+          onFailure:
+            - echo "uh oh, something went wrong"
+          onComplete:                                  #always
+            - echo "Cleaning up some stuff"
+
+ 
+      
